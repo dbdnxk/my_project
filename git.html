@@ -1,0 +1,27 @@
+①ディレクトリ作成
+mkdir my_project
+cd my_project
+
+②Git リポジトリを初期化
+git init
+
+③ ファイルを作成して変更する
+echo '<html><body><h1>Hello, Git!</h1></body></html>' > index.html
+
+④新しいファイル（または変更したファイル）を Git に「追加」
+git add index.html
+
+⑤ステージした変更をコミット
+git commit -m "Add index.html with Hello message"
+git log  確認
+
+⑥GitHub などのリモートリポジトリを作成（例：my_project）
+
+⑦リモートリポジトリと接続する
+git remote add origin https://github.com/ユーザー名/my_project.git
+※リモートURLを修正する
+git remote set-url origin https://github.com/dbdnxk/my_project.git
+git remote -v
+
+⑧ローカルの変更をリモートリポジトリにプッシュ
+git push -u origin master
